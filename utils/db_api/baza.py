@@ -96,6 +96,13 @@ class Database:
         sql, paratmetrs = self.format_args(sql, kwargs)
         return self.execute(sql, paratmetrs=paratmetrs, fetchone=True)
 
+    # 2
+    def selecet_barcha_menu1(self):
+        sql = """
+           SELECT * FROM menus 
+           """
+        return self.execute(sql,fetchall=True)
+
 def logger(statement):
     print(f"""
     ----------------------------------------------------
